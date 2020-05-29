@@ -1,11 +1,9 @@
 <h2>Cool Cocktails Title</h2>
 <p><%= link_to 'New Cocktail', new_cocktail_path %></p>
 <h1>All our cocktails (<%= @cocktails.count %>)</h1>
-<ul>
-<%= cl_image_tag("ztq6ozyf4rvkg42jijgu",
-      width: 400, height: 300, crop: :fill) %>
+<ul class="cards">
 <% @cocktails.each do |cocktail| %>
-  <li class="card">
+  <li class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key %>')">
     <h2><%= link_to cocktail.name, cocktail %></h2>
   </li>
 <% end %>

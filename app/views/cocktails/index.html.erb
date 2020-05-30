@@ -1,4 +1,12 @@
-<h2>Cool Cocktails Title</h2>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="navbar-left">
+    <%= link_to "#", class: "navbar-brand" do %>
+      <%= cl_image_tag("oermda8ecp66isbbi7vp") %>
+    <% end %>
+    <h2><strong><%= link_to 'Create Your own Cocktail', new_cocktail_path %></strong></h2>
+  </div>
+</div>
+<h2><em id="navbar-typed-text"></em></h2>
 <p><%= link_to 'New Cocktail', new_cocktail_path %></p>
 <h1>All our cocktails (<%= @cocktails.count %>)</h1>
 <ul class="cards">

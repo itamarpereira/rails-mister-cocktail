@@ -1,17 +1,42 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="navbar-left">
+    <h2><strong><%= link_to "Toros Cocktails", cocktails_path %></strong></h2>
+  </div>
+  <p class="btn btn-grad"><%= link_to 'Create Your Cocktail', new_cocktail_path %></p>
+</div>
 <div class="banner">
-  <div class="container">
-    <h1><%= @cocktail.name %></h1>
+  <div class="container-ban">
+    <h1>All our cocktails (<%= @cocktails.count %>)</h1>
+    <p><em id="navbar-typed-text"></em></p>
   </div>
 </div>
-
-<h2>Doses for this cocktail</h2>
-<ol>
-  <% @cocktail.doses.each do |dose| %>
-    <li><%= "#{dose.description} / #{dose.ingredient.name}" %></li>
-    <%= link_to dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' }, class: 'card-remove-link' do %>
-        <i class="fas fa-trash"></i>
-        <% end %>
-  <% end %>
-</ol>
-<%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail) %>
-<%= link_to 'Back', cocktails_path %>
+<div>
+    <div class="card-show">
+      <h2 class="card-show-img" style="background-image: url('<%= cl_image_path @cocktail.photo.key %>')"><%= link_to @cocktail.name, cocktail_path %></h2>
+      <div class="card-product-infos">
+        <p>Product description with <strong>relevant info</strong> only.</p>
+        <h2>Doses for <%= @cocktail.name %></h2>
+        <div>
+          <% @cocktail.doses.each do |dose| %>
+            <p><%= "#{dose.description} / #{dose.ingredient.name}" %>
+            <%= link_to dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' }, class: 'card-remove-link' do %>
+              <i class="fas fa-trash"></i>
+            <% end %>
+            </p>
+          <% end %>
+        </div>
+        <p><%= link_to '+ dose', new_cocktail_dose_path(@cocktail) %></p>
+      </div>
+    </div>
+  <ul class="cards">
+    <% @cocktails.each do |cocktail| %>
+    <li class="card-product">
+      <img src="<%= cl_image_path cocktail.photo.key %>" />
+      <div class="card-product-infos">
+        <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+        <p>Product description with <strong>relevant info</strong> only.</p>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+</div>

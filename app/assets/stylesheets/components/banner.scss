@@ -1,0 +1,33 @@
+.banner {
+  width: 100%;
+  height: auto;
+  background-image: url("https://res.cloudinary.com/dn2gpbtwl/image/upload/v1590886451/ban_bmi6vc.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 100px 100px;
+}
+
+.container-ban {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: auto;
+}
+
+.banner h1 {
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+  color: $text;
+}
+
+.banner p {
+  color: $text;
+  text-align: center;
+  opacity: 1;
+  font-size: 20px;
+}
+
+.banner a {
+  text-align: center;
+}

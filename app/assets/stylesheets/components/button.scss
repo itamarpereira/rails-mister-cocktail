@@ -1,0 +1,40 @@
+.btn-grad {
+  transition: 0.5s;
+  background-size: 200% auto;
+  margin: 8px;
+  background-image: linear-gradient(to right, #3a5c51 0%, #81c58e 51%, #3a5c51 100%)
+}
+
+.btn-grad:hover {
+  background-position: right center;
+}
+
+.btn-grad a {
+  color: $text;
+}
+
+.btn-grad a:hover {
+  text-decoration: none;
+}
+
+.btn-gradient {
+  padding: 8px 8px;
+  margin: auto;
+  border-radius: 4px;
+  background: linear-gradient(#167ffb, #0F60C4);
+  transition: 0.3s ease;
+  border: 1px solid #0F60C4;
+}
+
+.btn-gradient a {
+ font-size: small;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(#147EFF, #0F67DA);
+}
+
+.btn-gradient a:hover {
+  color: $text;
+  text-decoration: none;
+}

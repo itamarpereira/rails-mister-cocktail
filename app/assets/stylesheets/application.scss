@@ -11,3 +11,13 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+a {
+  color: $text;
+//  background-image:linear-gradient(to right, #16d6d9, #96cc29); color:rgba(0, 0, 0, 0); -webkit-background-clip:text; background-clip:text; position:relative;
+}
+
+a:hover {
+  color: $text;
+  text-decoration: none;
+}

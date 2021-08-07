@@ -13,11 +13,11 @@
 <div>
   <ul class="cards">
     <% @cocktails.each do |cocktail| %>
-<!--    <li class="card" style="background-image: url('<%= cl_image_path cocktail.photo.key %>')">
-      <h2><%= link_to cocktail.name, cocktail %></h2>
-    </li> -->
+    <li class="card" style="background-image: url('<%#= cl_image_path cocktail.photo.key %>')">
+      <h2><%#= link_to cocktail.name, cocktail %></h2>
+    </li>
     <li class="card-product">
-      <img src="<%= cl_image_path cocktail.photo.key %>" />
+      <img src="<%#= cl_image_path cocktail.photo.key %>" />
       <div class="card-product-infos">
         <h2><%= link_to cocktail.name, cocktail %></h2>
         <p>Product description with <strong>relevant info</strong> only.</p>
@@ -27,4 +27,4 @@
   </ul>
 </div>
 
-<!-- <%= cl_image_tag("oermda8ecp66isbbi7vp") %> -->
+ <%#= cl_image_tag("oermda8ecp66isbbi7vp") %>
